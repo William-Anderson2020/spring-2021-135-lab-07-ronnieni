@@ -1,7 +1,7 @@
-main: main.o funcs.o
+main: main.o unindent.o indent.o
 	g++ -o main main.o unindent.o indent.o
 
-tests: tests.o funcs.o
+tests: tests.o unindent.o indent.o
 	g++ -o tests tests.o unindent.o indent.o
 
 
