@@ -32,27 +32,18 @@ int indent_code(std::string filename) {
         if (countChar(line, '}') == 1) {
             tabs -= 1;
         }
-        
         if(singleLineLoop == true){ //Checks if an indent for a single line loop is present. If so, removes it.
             tabs -= 1;
             singleLineLoop = false;
-            //std::cout << "LOOP CLOSED" << std::endl;
         }
-
         if((line.find("if") <= line.length() || line.find("for") <= line.length()) && line[-1] != '{'){ //Checks line for "if" or "for". If found and final character isn't {, add new indent to accomodate for single line statement.
             tabs += 1;
             singleLineLoop = true; //Marks that a single line loop was just indented
-            //std::cout << "LOOP OPENED" << std::endl;
         }
-
         for (int i = 0; i < tabs; i++) {
             std::cout << "\t";
         }
 
     }
-
-    std::string test = "if test detection";
-    std::cout << test.find("if") << std::endl;
-
     return 0;
 }
