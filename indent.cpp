@@ -51,7 +51,7 @@ int indent_code(std::string filename) {
     }
 
     std::string test = "test if detection";
-    std::cout << test.find("if") << std::endl;
+    std::cout << test.find("for") << std::endl;
 
     return 0;
 }
