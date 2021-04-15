@@ -38,7 +38,7 @@ int indent_code(std::string filename) {
             std::cout << "LOOP CLOSED" << std::endl;
         }
 
-        if((line.find("if") || line.find("for")) && line[-1] != '{'){ //Checks line for "if" or "for". If found and final character isn't {, add new indent to accomodate for single line statement.
+        if((line.find("if") == 0 || line.find("for") == 0) && line[-1] != '{'){ //Checks line for "if" or "for". If found and final character isn't {, add new indent to accomodate for single line statement.
             tabs += 1;
             singleLineLoop = true; //Marks that a single line loop was just indented
             std::cout << "LOOP OPENED" << std::endl;
@@ -50,7 +50,7 @@ int indent_code(std::string filename) {
 
     }
 
-    std::string test = "test if detection";
+    std::string test = "if test if detection";
     std::cout << test.find("for") << std::endl;
 
     return 0;
