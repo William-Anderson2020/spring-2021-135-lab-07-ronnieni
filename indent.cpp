@@ -33,7 +33,7 @@ int indent_code(std::string filename) {
             tabs -= 1;
         }
         
-        if(singleLineLoop){ //Checks if an indent for a single line loop is present. If so, removes it.
+        if(singleLineLoop == true){ //Checks if an indent for a single line loop is present. If so, removes it.
             tabs -= 1;
         }
 
